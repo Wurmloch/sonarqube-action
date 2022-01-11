@@ -10,8 +10,6 @@ runs:
   env:
     http_proxy: ${{ inputs.proxy }}
     https_proxy: ${{ inputs.proxy }}
-    HTTP_PROXY: ${{ inputs.proxy }}
-    HTTPS_PROXY: ${{ inputs.proxy }}
 inputs:
   host:
     description: "SonarQube server URL"
