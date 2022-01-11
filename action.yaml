@@ -8,8 +8,8 @@ runs:
   using: "docker"
   image: "Dockerfile"
   env:
-    - http_proxy: ${{ inputs.proxy }}
-    - https_proxy: ${{ inputs.proxy }}
+    http_proxy: ${{ inputs.proxy }}
+    https_proxy: ${{ inputs.proxy }}
 inputs:
   host:
     description: "SonarQube server URL"
