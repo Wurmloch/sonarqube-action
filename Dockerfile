@@ -10,6 +10,11 @@ LABEL repository="https://github.com/kitabisa/sonarqube-action"
 LABEL homepage="https://kitabisa.github.io"
 LABEL maintainer="dwisiswant0"
 
+RUN echo $http_proxy
+RUN echo $https_proxy
+RUN echo $HTTP_PROXY
+RUN echo $HTTPS_PROXY
+
 RUN apk add --no-cache ca-certificates jq
 
 COPY entrypoint.sh /entrypoint.sh
