@@ -7,6 +7,9 @@ branding:
 runs:
   using: "docker"
   image: "Dockerfile"
+  env:
+    - http_proxy: ${{ inputs.proxy }}
+    - https_proxy: ${{ inputs.proxy }}
 inputs:
   host:
     description: "SonarQube server URL"
@@ -33,3 +36,7 @@ inputs:
   password:
     description: "Password that goes with the sonar.login username. This should be left blank if an authentication token is being used."
     required: false
+  proxy:
+    description: "Optional Proxy Server to use when"
+    required: false
+    default: ""
