@@ -11,7 +11,7 @@ inputs:
   workspace:
     description: "Override the GitHub Workspace"
     required: false
-    default: "{{ $env.GITHUB_WORKSPACE }}"
+    default: {{ $GITHUB_WORKSPACE }}
   host:
     description: "SonarQube server URL"
     required: true
