@@ -13,11 +13,11 @@ fi
 REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}")
 
 if [[ -z ${INPUT_WORKSPACE} ]]; then
-  echo "Overriding default Workspace..."
-  REPOSITORY_WORKSPACE=${INPUT_WORKSPACE}
-else
   echo "Using default Workspace..."
   REPOSITORY_WORKSPACE=${GITHUB_WORKSPACE}
+else
+  echo "Overriding default Workspace..."
+  REPOSITORY_WORKSPACE=${INPUT_WORKSPACE}
 fi
 
 echo Repository Name: $REPOSITORY_NAME, GitHub Repository: $GITHUB_REPOSITORY, GitHub Workspace: $GITHUB_WORKSPACE, Workspace: $REPOSITORY_WORKSPACE
