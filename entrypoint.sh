@@ -10,7 +10,7 @@ if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
 	fi
 fi
 
-ls -al
+echo $(ls -al) && pwd
 
 REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}"
 
