@@ -36,6 +36,7 @@ inputs:
   workspace:
     description: "Override the GitHub Workspace"
     required: false
+    default: ""
   args:
     description: "Override args (e.g. -Dsonar.sources=.) - Only taken into account when no sonar-project.properties file is given"
     required: false
