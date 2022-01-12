@@ -10,9 +10,6 @@ if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
 	fi
 fi
 
-ls -al
-pwd
-
 REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}")
 
 echo Repository Name: $REPOSITORY_NAME, GitHub Repository: $GITHUB_REPOSITORY, GitHub Workspace: $GITHUB_WORKSPACE
