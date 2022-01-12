@@ -11,8 +11,7 @@ if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
 fi
 
 ls -al
-pwd 
-find paramldb
+pwd
 
 REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}")
 
