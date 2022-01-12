@@ -33,10 +33,6 @@ inputs:
   password:
     description: "Password that goes with the sonar.login username. This should be left blank if an authentication token is being used."
     required: false
-  workspace:
-    description: "Override the GitHub Workspace"
-    required: false
-    default: ""
   args:
     description: "Override args (e.g. -Dsonar.sources=.) - Only taken into account when no sonar-project.properties file is given"
     required: false
