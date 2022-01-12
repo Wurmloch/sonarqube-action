@@ -12,10 +12,7 @@ fi
 
 REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}")
 
-echo "::notice Repository Name: $REPOSITORY_NAME, GitHub Repository: $GITHUB_REPOSITORY, GitHub Workspace: $GITHUB_WORKSPACE"
-echo "::group Current Folder Contents"
-echo ls -al
-echo "::endgroup::"
+echo Repository Name: $REPOSITORY_NAME, GitHub Repository: $GITHUB_REPOSITORY, GitHub Workspace: $GITHUB_WORKSPACE
 
 [[ ! -z ${INPUT_PASSWORD} ]] && SONAR_PASSWORD="${INPUT_PASSWORD}" || SONAR_PASSWORD=""
 
