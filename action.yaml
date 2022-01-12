@@ -10,8 +10,7 @@ runs:
 inputs:
   workspace:
     description: "Override the GitHub Workspace"
-    required: false
-    default: "$(echo $GITHUB_WORKSPACE)"
+    required: true
   host:
     description: "SonarQube server URL"
     required: true
