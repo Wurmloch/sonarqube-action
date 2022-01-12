@@ -10,8 +10,8 @@ LABEL repository="https://github.com/kitabisa/sonarqube-action"
 LABEL homepage="https://kitabisa.github.io"
 LABEL maintainer="dwisiswant0"
 
-RUN npm config set proxy $PROXY && \
-  npm config set https-proxy $PROXY
+RUN npm config set proxy $http_proxy && \
+  npm config set https-proxy $https_proxy
   
 RUN npm config set unsafe-perm true && \
   npm install --silent --save-dev -g typescript@3.5.2 && \
