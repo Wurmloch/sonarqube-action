@@ -8,6 +8,10 @@ runs:
   using: "docker"
   image: "Dockerfile"
 inputs:
+  workspace:
+    description: "Override the GitHub Workspace"
+    required: false
+    default: "${{ GITHUB_WORKSPACE }}"
   host:
     description: "SonarQube server URL"
     required: true
