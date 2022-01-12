@@ -10,21 +10,11 @@ if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
 	fi
 fi
 
-REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}")
+REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}"
 
-if [[ -z ${INPUT_WORKSPACE} ]]; then
-  echo "Using default Workspace..."
-  REPOSITORY_WORKSPACE=${GITHUB_WORKSPACE}
-else
-  echo "Overriding default Workspace..."
-  REPOSITORY_WORKSPACE=${INPUT_WORKSPACE}
-fi
-
-echo Repository Name: $REPOSITORY_NAME, GitHub Repository: $GITHUB_REPOSITORY, GitHub Workspace: $GITHUB_WORKSPACE, Workspace: $REPOSITORY_WORKSPACE
+echo Repository Name: $REPOSITORY_NAME, GitHub Repository: $GITHUB_REPOSITORY, GitHub Workspace: $GITHUB_WORKSPACE
 
 [[ ! -z ${INPUT_PASSWORD} ]] && SONAR_PASSWORD="${INPUT_PASSWORD}" || SONAR_PASSWORD=""
-
-cd $REPOSITORY_WORKSPACE
 
 if [[ ! -f "${REPOSITORY_WORKSPACE}/sonar-project.properties" ]]; then
   [[ -z ${INPUT_PROJECTKEY} ]] && SONAR_PROJECTKEY="${REPOSITORY_NAME}" || SONAR_PROJECTKEY="${INPUT_PROJECTKEY}"
