@@ -34,6 +34,6 @@ inputs:
     description: "Password that goes with the sonar.login username. This should be left blank if an authentication token is being used."
     required: false
   args:
-    description: "Override args (e.g. -Dsonar.sources=.)
+    description: "Override args (e.g. -Dsonar.sources=.)"
     required: false
     default: "-Dsonar.sources=. -Dsonar.sourceEncoding=UTF-8"
