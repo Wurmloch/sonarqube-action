@@ -10,9 +10,11 @@ if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
 	fi
 fi
 
-echo $(ls -al) && pwd
+ls -al
+pwd 
+find paramldb
 
-REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}"
+REPOSITORY_NAME=$(basename "${GITHUB_REPOSITORY}")
 
 echo Repository Name: $REPOSITORY_NAME, GitHub Repository: $GITHUB_REPOSITORY, GitHub Workspace: $GITHUB_WORKSPACE
 
