@@ -15,8 +15,9 @@ RUN npm config set proxy $http_proxy && \
   
 RUN npm config set unsafe-perm true && \
   npm install --silent --save-dev -g typescript@3.5.2 && \
-  npm config set unsafe-perm false && \
-  apk add --no-cache ca-certificates jq
+  npm config set unsafe-perm false
+
+RUN apk add --no-cache ca-certificates jq
 
 ENV NODE_PATH "/usr/lib/node_modules/"
 
