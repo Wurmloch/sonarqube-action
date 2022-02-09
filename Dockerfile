@@ -10,7 +10,7 @@ LABEL repository="https://github.com/kitabisa/sonarqube-action"
 LABEL homepage="https://kitabisa.github.io"
 LABEL maintainer="dwisiswant0"
  
-RUN apk add --no-cache ca-certificates jq
+RUN apk update && apk add ca-certificates && update-ca-certificates && apk add jq
 
 RUN npm install -g typescript@4
 
