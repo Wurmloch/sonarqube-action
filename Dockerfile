@@ -9,7 +9,10 @@ LABEL version="0.0.3"
 LABEL repository="https://github.com/kitabisa/sonarqube-action"
 LABEL homepage="https://kitabisa.github.io"
 LABEL maintainer="dwisiswant0"
-  
+
+RUN npm config set proxy $http_proxy && \
+  npm config set https-proxy $https_proxy
+ 
 RUN apk add --no-cache ca-certificates jq
 
 RUN npm config set unsafe-perm true && \
