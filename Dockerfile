@@ -1,4 +1,4 @@
-FROM sonarsource/sonar-scanner-cli:latest
+FROM minddocdev/sonar-scanner-typescript:latest
 
 LABEL "com.github.actions.name"="SonarQube Scan"
 LABEL "com.github.actions.description"="Scan your code with SonarQube Scanner to detect bugs, vulnerabilities and code smells in more than 25 programming languages."
@@ -9,10 +9,6 @@ LABEL version="0.0.3"
 LABEL repository="https://github.com/kitabisa/sonarqube-action"
 LABEL homepage="https://kitabisa.github.io"
 LABEL maintainer="dwisiswant0"
- 
-RUN apk update && apk add ca-certificates && update-ca-certificates && apk add jq
-
-RUN npm install -g typescript@4
 
 ENV NODE_PATH "/usr/lib/node_modules/"
 
